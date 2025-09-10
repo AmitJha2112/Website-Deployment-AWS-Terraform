@@ -9,7 +9,7 @@ This project demonstrates how to deploy a **scalable and highly available websit
 - **Auto Scaling** and **Application Load Balancer (ALB)**  
 - **CloudWatch monitoring** with alarms and dashboards  
 - **SNS notifications** for real-time alerts  
-- Secure **database deployment** in private subnet  
+- Secure **database deployment** in a private subnet  
 
 This setup ensures your website is highly available, scalable, and monitored.
 
@@ -21,82 +21,54 @@ This setup ensures your website is highly available, scalable, and monitored.
 - Application Load Balancer for distributing requests  
 - CloudWatch monitoring and dashboards  
 - SNS notifications for critical alerts  
-- Secure private subnet database  
+- Secure database in a private subnet  
 
 ---
 
 ## Prerequisites
 
-Before running the project, ensure you have:
+Before running this project, ensure you have:
 
 1. **Terraform v1.5+** installed  
    [Terraform Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)  
 
-2. **AWS CLI** installed and configured with credentials  
+2. **AWS CLI** installed and configured:  
    ```bash
-   
    aws configure
-Access Key ID
-Secret Access Key
 
-Default region (e.g., us-east-1)
-Default output format (json)
-
+   Enter your AWS credentials, default region, and output format.
 
 Git installed to clone the repository
 
-Steps to Deploy
-1. Clone the Repository
-bash
-git clone https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform.git
+Basic knowledge of AWS services like EC2, VPC, ALB, Auto Scaling, CloudWatch, and SNS
 
+# 1️⃣ Clone the repository
+git clone https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform.git
 cd Website-Deployment-AWS-Terraform
 
-3. Configure Terraform Variables
-Open provider.tf or variables.tf and replace placeholders with your own AWS keys (or use environment variables)
-
-Example using environment variables (safer than committing secrets):
-
+# 2️⃣ Set AWS credentials via environment variables (safer than committing secrets)
 export AWS_ACCESS_KEY_ID="your_access_key"
 export AWS_SECRET_ACCESS_KEY="your_secret_key"
-3. Initialize Terraform
 
+# 3️⃣ Initialize Terraform
 terraform init
-This downloads necessary providers and initializes the project.
 
-4. Plan the Deployment
+# 4️⃣ Plan the deployment
 terraform plan
-Checks what resources Terraform will create
 
-Ensures your configuration is valid
-
-5. Apply the Terraform Configuration
-
+# 5️⃣ Apply Terraform configuration
 terraform apply
-Terraform will show a summary of resources to create
+# Type "yes" to confirm
 
-Type yes to confirm
+# 6️⃣ Verify deployment
+# - Check EC2 instances in AWS Console
+# - Open ALB DNS in browser
+# - Check CloudWatch alarms and SNS notifications
 
-Wait for resources to be provisioned (EC2, VPC, ALB, etc.)
-
-6. Verify Deployment
-Open AWS Console → EC2 → Check running instances
-
-Open AWS Console → ALB → Copy DNS and open in browser
-
-Verify CloudWatch alarms and SNS notifications
-
-7. Destroy Resources (Optional)
-When finished, you can clean up all resources:
-
+# 7️⃣ Clean up (Optional)
 terraform destroy
-Type yes to confirm
+# Type "yes" to confirm
 
-This prevents unnecessary AWS charges
-
-Project Structure
-bash
-Copy code
 Website-Deployment-AWS-Terraform/
 │
 ├── images/                # Screenshots for README
@@ -106,9 +78,8 @@ Website-Deployment-AWS-Terraform/
 ├── alb.tf                 # Application Load Balancer
 ├── autoscaling.tf         # Auto Scaling configuration
 ├── sns.tf                 # SNS notifications
-├── cloudwatch.tf          # CloudWatch alarms & dashboard
-└── README.md              # Project documentation# Website Deployment on AWS using Terraform 
-
+├── cloudwatch.tf          # CloudWatch alarms & dashboards
+└── README.md              # Project documentation
 
 
 ## 🛠 Project Implementation Steps
