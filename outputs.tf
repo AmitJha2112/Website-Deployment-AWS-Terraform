@@ -1,0 +1,9 @@
+output "vpc_id"               { value = module.vpc.vpc_id }
+output "public_subnet_ids"    { value = module.vpc.public_subnet_ids }
+output "private_subnet_ids"   { value = module.vpc.private_subnet_ids }
+output "alb_dns_name"         { value = module.alb.alb_dns_name }
+output "target_group_arn"     { value = module.alb.target_group_arn }
+output "asg_name"             { value = module.compute.asg_name }
+output "sns_topic_arn"        { value = module.monitoring.sns_topic_arn }
+output "cloudwatch_dashboard" { value = module.monitoring.dashboard_name }
+output "rds_endpoint"         { value = module.database.rds_endpoint }
