@@ -77,9 +77,7 @@ This project demonstrates hosting a scalable and highly available website on **A
 
 ### Public IP Outputs
 - **Webserver 1 Output**  
-  ![My_Project_Webserver1](images/screenshot19.png)
-- **Webserver 2 Output**  
-  ![My_Project_Webserver2](images/screenshot20.png)
+  ![My_Project_Webserver1](images/screenshot20.png)
 
 ### Load Balancer & Domain Outputs
 - **Application Output via Load Balancer DNS**  
@@ -119,8 +117,3 @@ This project demonstrates hosting a scalable and highly available website on **A
 - Secured the architecture by placing the **database in a private subnet**  
 
 ---
-
-##   Author
-**Jayshri Landge**  
-📍 Aurangabad, India  
-🔗 [GitHub Profile](https://github.com/jayshrilandge30)
