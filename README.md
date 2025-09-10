@@ -1,21 +1,112 @@
-# Website Deployment on AWS using Terraform 
+# Website Deployment on AWS using Terraform and Custom VPC
 
 ## Project Overview
-This project demonstrates hosting a scalable and highly available website on **AWS** by creating a **Custom VPC** with **Auto Scaling**, **Application Load Balancer**, and monitoring via **CloudWatch**. It also integrates **Simple Notification Service (SNS)** for real-time alerts and notifications, ensuring continuous availability, scalability, and operational visibility.
+This project demonstrates how to deploy a **scalable and highly available website** on AWS using **Terraform**. It includes:
 
-🔗 **GitHub Repository:** [Website_Deployment_on_AWS](https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform)
+- Creation of a **Custom VPC** with public and private subnets  
+- **Internet Gateway** and **NAT Gateway** for connectivity  
+- **Security Groups** for safe access  
+- **Auto Scaling** and **Application Load Balancer (ALB)**  
+- **CloudWatch monitoring** with alarms and dashboards  
+- **SNS notifications** for real-time alerts  
+- Secure **database deployment** in private subnet  
+
+This setup ensures your website is highly available, scalable, and monitored.
 
 ---
 
 ## Features
-- **Custom VPC** for secure and isolated networking
-- **Auto Scaling** for handling varying traffic loads
-- **Application Load Balancer** for distributing requests
-- **CloudWatch Monitoring** with alarms and dashboards
-- **AWS SNS** for instant notifications
-- **Secure Database Deployment** in private subnet
+- Custom VPC for isolated networking  
+- Auto Scaling for traffic handling  
+- Application Load Balancer for distributing requests  
+- CloudWatch monitoring and dashboards  
+- SNS notifications for critical alerts  
+- Secure private subnet database  
 
 ---
+
+## Prerequisites
+
+Before running the project, ensure you have:
+
+1. **Terraform v1.5+** installed  
+   [Terraform Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)  
+
+2. **AWS CLI** installed and configured with credentials  
+   ```bash
+   aws configure
+Access Key ID
+Secret Access Key
+
+Default region (e.g., us-east-1)
+Default output format (json)
+
+Git installed to clone the repository
+
+Steps to Deploy
+1. Clone the Repository
+bash
+git clone https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform.git
+cd Website-Deployment-AWS-Terraform
+
+3. Configure Terraform Variables
+Open provider.tf or variables.tf and replace placeholders with your own AWS keys (or use environment variables)
+
+Example using environment variables (safer than committing secrets):
+
+export AWS_ACCESS_KEY_ID="your_access_key"
+export AWS_SECRET_ACCESS_KEY="your_secret_key"
+3. Initialize Terraform
+
+terraform init
+This downloads necessary providers and initializes the project.
+
+4. Plan the Deployment
+terraform plan
+Checks what resources Terraform will create
+
+Ensures your configuration is valid
+
+5. Apply the Terraform Configuration
+
+terraform apply
+Terraform will show a summary of resources to create
+
+Type yes to confirm
+
+Wait for resources to be provisioned (EC2, VPC, ALB, etc.)
+
+6. Verify Deployment
+Open AWS Console → EC2 → Check running instances
+
+Open AWS Console → ALB → Copy DNS and open in browser
+
+Verify CloudWatch alarms and SNS notifications
+
+7. Destroy Resources (Optional)
+When finished, you can clean up all resources:
+
+terraform destroy
+Type yes to confirm
+
+This prevents unnecessary AWS charges
+
+Project Structure
+bash
+Copy code
+Website-Deployment-AWS-Terraform/
+│
+├── images/                # Screenshots for README
+├── provider.tf            # AWS provider configuration
+├── variables.tf           # Terraform variables
+├── main.tf                # VPC, Subnets, Security Groups
+├── alb.tf                 # Application Load Balancer
+├── autoscaling.tf         # Auto Scaling configuration
+├── sns.tf                 # SNS notifications
+├── cloudwatch.tf          # CloudWatch alarms & dashboard
+└── README.md              # Project documentation# Website Deployment on AWS using Terraform 
+
+
 
 ## 🛠 Project Implementation Steps
 
