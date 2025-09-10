@@ -40,34 +40,16 @@ Before running this project, ensure you have:
 
 Git installed to clone the repository
 
-Basic knowledge of AWS services like EC2, VPC, ALB, Auto Scaling, CloudWatch, and SNS
+# Clone the repo, set AWS credentials, initialize Terraform, validate, plan, and apply in one go
 
-1️⃣ Clone the repository
-git clone https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform.git
-cd Website-Deployment-AWS-Terraform
-
-2️⃣ Set AWS credentials via environment variables (safer than committing secrets)
+git clone https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform.git 
+cd Website-Deployment-AWS-Terraform 
 export AWS_ACCESS_KEY_ID="your_access_key"
-export AWS_SECRET_ACCESS_KEY="your_secret_key"
-
-3️⃣ Initialize Terraform
-terraform init
-
-4️⃣ Plan the deployment
-terraform plan
-
-5️⃣ Apply Terraform configuration
+export AWS_SECRET_ACCESS_KEY="your_secret_key" 
+terraform init 
+terraform validate 
+terraform plan 
 terraform apply
-# Type "yes" to confirm
-
-6️⃣ Verify deployment
- Check EC2 instances in AWS Console
- Open ALB DNS in browser
-Check CloudWatch alarms and SNS notifications
-
-7️⃣ Clean up (Optional)
-terraform destroy
-# Type "yes" to confirm
 
 Website-Deployment-AWS-Terraform/
 │
