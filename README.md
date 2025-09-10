@@ -1,4 +1,4 @@
-# Website Deployment on AWS using Custom VPC and Monitoring
+# Website Deployment on AWS using Terraform 
 
 ## Project Overview
 This project demonstrates hosting a scalable and highly available website on **AWS** by creating a **Custom VPC** with **Auto Scaling**, **Application Load Balancer**, and monitoring via **CloudWatch**. It also integrates **Simple Notification Service (SNS)** for real-time alerts and notifications, ensuring continuous availability, scalability, and operational visibility.
