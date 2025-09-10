@@ -3,7 +3,7 @@
 ## Project Overview
 This project demonstrates hosting a scalable and highly available website on **AWS** by creating a **Custom VPC** with **Auto Scaling**, **Application Load Balancer**, and monitoring via **CloudWatch**. It also integrates **Simple Notification Service (SNS)** for real-time alerts and notifications, ensuring continuous availability, scalability, and operational visibility.
 
-🔗 **GitHub Repository:** [Website_Deployment_on_AWS](https://github.com/jayshrilandge30/Website_Deployment_on_AWS)
+🔗 **GitHub Repository:** [Website_Deployment_on_AWS](https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform)
 
 ---
 
@@ -67,13 +67,6 @@ This project demonstrates hosting a scalable and highly available website on **A
 
 ##  Website Outputs
 
-### Server & Database
-- **Deployed Server Instances**  
-  ![Deployed Server Instances](images/screenshot16.png)
-- **Database Table in Private Subnet**  
-  ![Database Table](images/screenshot17.png)
-- **SNS Notification Received in Gmail**  
-  ![SNS Notification](images/screenshot18.png)
 
 ### Public IP Outputs
 - **Webserver 1 Output**  
