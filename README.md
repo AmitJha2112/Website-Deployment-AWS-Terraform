@@ -38,18 +38,61 @@ Before running this project, ensure you have:
 
    Enter your AWS credentials, default region, and output format.
 
-Git installed to clone the repository
+Steps to Deploy the Website on AWS
 
-# Clone the repo, set AWS credentials, initialize Terraform, validate, plan, and apply in one go
+Clone the repository
 
-git clone https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform.git 
-cd Website-Deployment-AWS-Terraform 
+git clone https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform.git
+cd Website-Deployment-AWS-Terraform
+
+
+Set AWS credentials
+
+Either via AWS CLI:
+
+aws configure
+
+
+Or using environment variables:
+
 export AWS_ACCESS_KEY_ID="your_access_key"
-export AWS_SECRET_ACCESS_KEY="your_secret_key" 
-terraform init 
-terraform validate 
-terraform plan 
+export AWS_SECRET_ACCESS_KEY="your_secret_key"
+
+
+Initialize Terraform
+
+terraform init
+
+
+Validate Terraform configuration
+
+terraform validate
+
+
+Create an execution plan
+
+terraform plan
+
+
+Apply the configuration
+
 terraform apply
+
+
+Terraform will ask for confirmation. Type yes to proceed.
+
+Verify deployment
+
+Check AWS Console for created resources.
+
+Open the Application Load Balancer DNS in a browser to see your website.
+
+Destroy resources (optional)
+
+terraform destroy
+
+
+Type yes to remove all resources and avoid charges.
 
 Website-Deployment-AWS-Terraform/
 │
