@@ -47,48 +47,38 @@ cd Website-Deployment-AWS-Terraform
 
 
 Set AWS credentials
-
 Either via AWS CLI:
 
 aws configure
-
-
-Or using environment variables:
+using environment variables:
 
 export AWS_ACCESS_KEY_ID="your_access_key"
 export AWS_SECRET_ACCESS_KEY="your_secret_key"
 
 
-Initialize Terraform
-
+# Initialize Terraform
 terraform init
 
 
-Validate Terraform configuration
-
+# Validate Terraform configuration
 terraform validate
 
 
-Create an execution plan
-
+# Create an execution plan
 terraform plan
 
 
-Apply the configuration
-
+# Apply the configuration
 terraform apply
 
 
 Terraform will ask for confirmation. Type yes to proceed.
 
 Verify deployment
-
 Check AWS Console for created resources.
-
 Open the Application Load Balancer DNS in a browser to see your website.
 
-Destroy resources (optional)
-
+# Destroy resources (optional)
 terraform destroy
 
 
