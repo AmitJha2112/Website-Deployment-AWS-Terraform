@@ -84,19 +84,6 @@ terraform destroy
 
 Type yes to remove all resources and avoid charges.
 
-Website-Deployment-AWS-Terraform/
-│
-├── images/                Screenshots for README
-├── provider.tf            AWS provider configuration
-├── variables.tf           Terraform variables
-├── main.tf                VPC, Subnets, Security Groups
-├── alb.tf                 Application Load Balancer
-├── autoscaling.tf         Auto Scaling configuration
-├── sns.tf                 SNS notifications
-├── cloudwatch.tf          CloudWatch alarms & dashboards
-└── README.md              Project documentation
-
-
 ## 🛠 Project Implementation Steps
 
 ### 1. Create a Custom VPC
