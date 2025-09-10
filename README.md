@@ -34,6 +34,7 @@ Before running the project, ensure you have:
 
 2. **AWS CLI** installed and configured with credentials  
    ```bash
+   
    aws configure
 Access Key ID
 Secret Access Key
@@ -41,12 +42,14 @@ Secret Access Key
 Default region (e.g., us-east-1)
 Default output format (json)
 
+
 Git installed to clone the repository
 
 Steps to Deploy
 1. Clone the Repository
 bash
 git clone https://github.com/AmitJha2112/Website-Deployment-AWS-Terraform.git
+
 cd Website-Deployment-AWS-Terraform
 
 3. Configure Terraform Variables
