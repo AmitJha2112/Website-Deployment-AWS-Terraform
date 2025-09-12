@@ -196,7 +196,6 @@ The project deploys a multi-tier website architecture where traffic is distribut
 ✅ Automated scaling to handle varying traffic loads
 
 ---  
-
 ---
 ## Final Note
 
